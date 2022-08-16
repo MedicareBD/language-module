@@ -19,6 +19,7 @@ class LanguageDatabaseSeeder extends Seeder
 
         Language::create([
             'name' => 'English',
+            'native_name' => 'English',
             'code' => 'en',
             'isDefault' => true,
             'isSystem' => true

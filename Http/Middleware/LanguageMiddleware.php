@@ -19,7 +19,7 @@ class LanguageMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (!Session::has('locale')) {
-            Session::put('locale', 'bn');
+            Session::put('locale', 'en');
         }
         App::setlocale(Session::get('locale'));
         return $next($request);

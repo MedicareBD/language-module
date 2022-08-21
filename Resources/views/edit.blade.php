@@ -29,7 +29,7 @@
                                 <tr>
                                     <th>{{ $key }}</th>
                                     <td>
-                                        <input type="text" name="phrases[{{ $key }}]" class="form-control" value="{{ $value }}" placeholder="{{ $value }}">
+                                        <input type="text" name="phrases[{{ $key }}]" class="form-control" value="{{ $value }}" placeholder="{{ $value }}" aria-label="">
                                     </td>
                                 </tr>
                             @endforeach

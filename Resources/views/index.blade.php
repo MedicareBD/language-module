@@ -7,9 +7,9 @@
         <div class="col-md-12 col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h4>@lang('Language List')</h4>
+                    <h4>{{ __("Language List") }}</h4>
                     <div class="card-header-action">
-                        <a href="{{ route('admin.languages.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> @lang('Add Language')</a>
+                        <a href="{{ route('admin.languages.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> {{ __("Add Language") }}</a>
                     </div>
                 </div>
                 <div class="card-body">

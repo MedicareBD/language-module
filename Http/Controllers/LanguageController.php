@@ -137,4 +137,14 @@ class LanguageController extends Controller
 
         file_put_contents(base_path('lang/'.$code.'.json'), json_encode($phrases));
     }
+
+    public function sync(Language $language)
+    {
+        // TODO:: implement this section
+
+        return response()->json([
+            'message' => __('Phrases Translated Successfully'),
+            'redirect' => route('admin.languages.edit', $language->id)
+        ]);
+    }
 }

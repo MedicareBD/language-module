@@ -12,6 +12,17 @@
                         <a href="{{ route('admin.languages.index') }}" class="btn btn-primary">
                             <i class="fas fa-language"></i> {{ __('Language List') }}
                         </a>
+
+                        @if(config('googletranslate.api_key'))
+                            <a
+                                href="{{ route('admin.languages.sync', $language->id) }}"
+                                class="btn btn-danger confirm-action"
+                                data-icon="fas fa-sync"
+                                data-content="{{ __("All Phrases will be replaced.") }}"
+                            >
+                                <i class="fas fa-sync"></i> {{ __('Translate From Google') }}
+                            </a>
+                        @endif
                     </div>
                 </div>
                 <div class="card-body">

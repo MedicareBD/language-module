@@ -21,5 +21,8 @@
             "Modules\\Language\\": ""
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "joggapp/laravel-google-translate": "dev-master"
+    }
 }

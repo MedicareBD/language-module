@@ -15,7 +15,7 @@ class UpdateLanguageRequest extends FormRequest
     {
         return [
             'phrases' => ['required', 'array'],
-            'phrases.*' => ['nullable', 'string']
+            'phrases.*' => ['nullable', 'string'],
         ];
     }
 

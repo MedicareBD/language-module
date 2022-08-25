@@ -2,8 +2,8 @@
 
 namespace Modules\Language\DataTables;
 
-use Modules\Language\Entities\Language;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
+use Modules\Language\Entities\Language;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
 use Yajra\DataTables\Html\Column;
@@ -15,8 +15,8 @@ class LanguageDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addIndexColumn()
-            ->editColumn('created_at', fn($model) => format_date($model->created_at))
-            ->addColumn('action', fn($model) => view('language::action', compact('model')))
+            ->editColumn('created_at', fn ($model) => format_date($model->created_at))
+            ->addColumn('action', fn ($model) => view('language::action', compact('model')))
             ->setRowId('id');
     }
 
@@ -51,9 +51,9 @@ class LanguageDataTable extends DataTable
                 ->exportable(false)
                 ->orderable(false)
                 ->title('#'),
-            Column::make('name')->title(__("Name")),
-            Column::make('code')->title(__("Code")),
-            Column::make('created_at')->title(__("Created At")),
+            Column::make('name')->title(__('Name')),
+            Column::make('code')->title(__('Code')),
+            Column::make('created_at')->title(__('Created At')),
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
@@ -66,6 +66,6 @@ class LanguageDataTable extends DataTable
 
     protected function filename(): string
     {
-        return 'Manufacturers_' . date('YmdHis');
+        return 'Manufacturers_'.date('YmdHis');
     }
 }

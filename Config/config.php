@@ -11,12 +11,12 @@ return [
             'order' => 100,
             'submenu' => [
                 [
-                    'text'      => 'Languages',
-                    'route'     => 'admin.languages.index',
-                    'can'       => 'languages-read',
+                    'text' => 'Languages',
+                    'route' => 'admin.languages.index',
+                    'can' => 'languages-read',
                     'order' => 100,
                 ],
-            ]
-        ]
+            ],
+        ],
     ],
 ];

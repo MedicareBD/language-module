@@ -10,9 +10,4 @@ class Language extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
-
-    protected static function newFactory()
-    {
-        return \Modules\Language\Database\factories\LanguageFactory::new();
-    }
 }
